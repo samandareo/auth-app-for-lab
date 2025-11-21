@@ -104,7 +104,7 @@ export default function LoginPage() {
                 placeholder="Enter your password"
                 type={showPassword ? "text" : "password"}
                 required
-                minLength={4}
+                minLength={6}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}

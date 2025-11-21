@@ -110,10 +110,10 @@ export default function SignupPage() {
               <input
                 id="password"
                 className="form-input"
-                placeholder="Create a password (min. 4 characters)"
+                placeholder="Create a password (min. 6 characters)"
                 type={showPassword ? "text" : "password"}
                 required
-                minLength={4}
+                minLength={6}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
@@ -162,7 +162,7 @@ export default function SignupPage() {
                 placeholder="Confirm your password"
                 type={showConfirmPassword ? "text" : "password"}
                 required
-                minLength={4}
+                minLength={6}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 disabled={loading}
