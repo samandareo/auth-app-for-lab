@@ -1,0 +1,79 @@
+/* Enhanced Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.interactive {
+  transition: all 0.2s ease;
+}
+
+.interactive:hover {
+  transform: scale(1.02);
+}
+
+.interactive:active {
+  transform: scale(0.98);
+}
+
+/* Eye button animations */
+.eye-button {
+  transition: all 0.2s ease;
+  border-radius: 0.25rem;
+}
+
+.eye-button:hover {
+  transform: scale(1.1);
+  color: var(--primary) !important;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.eye-button:active {
+  transform: scale(0.9);
+}
+
+/* Enhanced link hover effect */
+.link:hover {
+  transform: translateY(-1px) !important;
+}
+
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  background: #22c55e;
+}
+
+/* Form group staggered animations */
+.form-group {
+  animation: slideUp 0.4s ease-out;
+  animation-fill-mode: both;
+}

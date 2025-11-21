@@ -6,23 +6,15 @@ export async function middleware(req: NextRequest) {
     const res = NextResponse.next();
     const supabase = createMiddlewareClient({ req, res });
 
-    const {
-        data: { session },
-    } = await supabase.auth.getSession();
-
     const path = req.nextUrl.pathname;
 
-    if (path.startsWith("/dashboard") && !session) {
-        return NextResponse.redirect(new URL("/login", req.url));
-    }
-
-    if ((path === "/login" || path === "/signup") && session) {
-        return NextResponse.redirect(new URL("/dashboard", req.url));
+    if (path === "/") {
+        return NextResponse.redirect(new URL("/auth/login", req.url));
     }
 
     return res;
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*", "/login", "/signup"],
+    matcher: ["/"],
 };
